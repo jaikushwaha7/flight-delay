@@ -19,22 +19,19 @@ jobs:
         git config --global user.email "jaikushwaha7@gmail.com"
         git config --global user.name "jaikushwaha7"
 
-        # Clone Hugging Face Space outside current dir
+        # Clone Hugging Face Space outside current directory
         git clone https://huggingface.co/spaces/jaikushwaha7/flight-delay ../hf-space
 
-        # Copy contents of GitHub repo (current directory) into the cloned HF repo
+        # Copy contents of GitHub repo to Hugging Face Space, excluding large files
         rsync -av \
-                  --exclude='.git' ./ \
-                  --exclude='.git' --exclude='data/raw/flights_sample_100k.csv' --exclude='reports/' \
-                  --exclude='output_report.html' \
-                  --exclude='data/raw/flight-delay-and-cancellation-data-2019-2023-v2.zip' \
-                  --exclude='wandb/' ./ ../hf-space/
-                  -exclude='.git' \
-                  --exclude='data/raw/flights_sample_100k.csv' \
-                  --exclude='data/reports/' \
-                  --exclude='data/output_report.html' \ 
-                  ./ ../hf-space/
-          
+          --exclude='.git' \
+          --exclude='data/raw/flights_sample_100k.csv' \
+          --exclude='data/raw/flight-delay-and-cancellation-data-2019-2023-v2.zip' \
+          --exclude='data/reports/' \
+          --exclude='output_report.html' \
+          --exclude='wandb/' \
+          ./ ../hf-space/
+
         cd ../hf-space
         git add .
         git commit -m "🚀 Auto-sync from GitHub" || echo "No changes to commit"

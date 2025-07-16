@@ -33,7 +33,6 @@ jobs:
                   --exclude='data/raw/flights_sample_100k.csv' \
                   --exclude='data/reports/' \
                   --exclude='data/output_report.html' \ 
-                  -exclude='.git' \ 
                   ./ ../hf-space/
           
         cd ../hf-space

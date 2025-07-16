@@ -10,3 +10,8 @@ __pycache__
 *.pkl.gz
 *.ipynb_checkpoints
 *.log
+*.joblib
+*.h5
+*.hdf5
+.wandb
+.wandb/*

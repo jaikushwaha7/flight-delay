@@ -1,0 +1,92 @@
+_wandb:
+    value:
+        cli_version: 0.21.0
+        code_path: source-flight-delay-prediction-final-notebook_colab.ipynb
+        e:
+            p24lewvo3uaugu1l3lob6q8okbuocb2b:
+                codePath: notebook_colab.ipynb
+                codePathLocal: notebook_colab.ipynb
+                colab: https://colab.research.google.com/notebook#fileId=1Oz3SYhvofSZJ5wVvcadzPa4IUm6STdlv
+                cpu_count: 48
+                cpu_count_logical: 96
+                disk:
+                    /:
+                        total: "241948286976"
+                        used: "22957592576"
+                email: jaikushwaha7@gmail.com
+                executable: /usr/bin/python3
+                host: 01a3781cb37e
+                memory:
+                    total: "359232077824"
+                os: Linux-6.1.123+-x86_64-with-glibc2.35
+                program: notebook_colab.ipynb
+                python: CPython 3.11.13
+                root: /content/drive/MyDrive/Colab Notebooks/flight_delay
+                startedAt: "2025-07-15T16:33:10.372363Z"
+                tpu:
+                    count: 4
+                    devicesPerChip: 2
+                    hbmGib: 8
+                    name: v2
+                writerId: p24lewvo3uaugu1l3lob6q8okbuocb2b
+        m: []
+        python_version: 3.11.13
+        t:
+            "1":
+                - 2
+                - 3
+                - 5
+                - 12
+                - 49
+                - 53
+                - 105
+            "2":
+                - 2
+                - 3
+                - 5
+                - 12
+                - 49
+                - 53
+                - 105
+            "3":
+                - 2
+                - 13
+                - 16
+            "4": 3.11.13
+            "5": 0.21.0
+            "8":
+                - 1
+                - 2
+                - 12
+            "12": 0.21.0
+            "13": linux-x86_64
+arr_delay_threshold_mins:
+    value: 15
+data_sample_file:
+    value: flights_sample_10k.csv
+dataset_name:
+    value: patrickzel/flight-delay-and-cancellation-data-2019-2023-v2
+eda_min_flight_count_airline_delay:
+    value: 500
+eda_top_n_destinations:
+    value: 20
+high_correlation_threshold:
+    value: 0.9
+nn_batch_size:
+    value: 32
+nn_epochs:
+    value: 10
+project_name:
+    value: flight-delay-prediction-final
+random_state:
+    value: 42
+run_name:
+    value: full_pipeline_refactored_v1
+shap_explain_sample_size:
+    value: 1000
+target_column:
+    value: FLIGHT_STATUS
+test_size:
+    value: 0.15
+validation_split_ratio:
+    value: 0.15

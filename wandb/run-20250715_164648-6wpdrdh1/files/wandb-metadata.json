@@ -1,0 +1,31 @@
+{
+  "os":  "Linux-6.1.123+-x86_64-with-glibc2.35",
+  "python":  "CPython 3.11.13",
+  "startedAt":  "2025-07-15T16:46:48.851435Z",
+  "program":  "notebook_colab.ipynb",
+  "codePath":  "notebook_colab.ipynb",
+  "codePathLocal":  "notebook_colab.ipynb",
+  "email":  "jaikushwaha7@gmail.com",
+  "root":  "/content/drive/MyDrive/Colab Notebooks/flight_delay",
+  "host":  "01a3781cb37e",
+  "executable":  "/usr/bin/python3",
+  "colab":  "https://colab.research.google.com/notebook#fileId=1Oz3SYhvofSZJ5wVvcadzPa4IUm6STdlv",
+  "cpu_count":  48,
+  "cpu_count_logical":  96,
+  "disk":  {
+    "/":  {
+      "total":  "241948286976",
+      "used":  "23338942464"
+    }
+  },
+  "memory":  {
+    "total":  "359232077824"
+  },
+  "tpu":  {
+    "name":  "v2",
+    "hbmGib":  8,
+    "devicesPerChip":  2,
+    "count":  4
+  },
+  "writerId":  "s2s52m215737o60hqczc444egls59eiy"
+}

@@ -1,0 +1,4 @@
+Model,Task,Stage,Accuracy,Precision,Recall,F1-Score,ROC-AUC
+Baseline Model,Classification,Test,0.8289,0.0000,0.0000,0.0000,0.5000
+Logistic Regression Model,Classification,Test,0.9541,0.9552,0.7680,0.8514,0.9723
+Neural Network Classification Model,Classification,Test,0.9569,0.9349,0.8040,0.8645,0.9779

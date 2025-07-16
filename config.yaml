@@ -1,0 +1,13 @@
+dataset_name: patrickzel/flight-delays-from-2017-to-2024
+data_sample_file: flights_sample_100k.csv
+project_name: flight-delay-prediction-final
+run_name: full_pipeline_initial_run
+target_column: FLIGHT_STATUS
+arr_delay_threshold_mins: 15
+test_size: 0.2
+validation_split_ratio: 0.25 # 0.25 of train_val set (which is 0.25 * 0.8 = 0.2 total data)
+random_state: 42
+high_correlation_threshold: 0.9
+eda_top_n_destinations: 20
+eda_min_flight_count_airline_delay: 500
+shap_explain_sample_size: 1000 # Number of 

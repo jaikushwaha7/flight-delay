@@ -42,6 +42,7 @@ jobs:
             --exclude='reports/' \
             --exclude='output_report.html' \
             --exclude='wandb/' \
+            --exclude='plots/' \
             ./ ../hf-space/
 
 

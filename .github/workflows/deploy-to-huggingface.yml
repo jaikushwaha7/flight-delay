@@ -39,6 +39,7 @@ jobs:
             --exclude='data/raw/flights_sample_100k.csv' \
             --exclude='data/raw/flight-delay-and-cancellation-data-2019-2023-v2.zip' \
             --exclude='data/reports/' \
+            --exclude='reports/' \
             --exclude='output_report.html' \
             --exclude='wandb/' \
             ./ ../hf-space/

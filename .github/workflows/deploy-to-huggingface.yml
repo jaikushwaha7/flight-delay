@@ -23,17 +23,28 @@ jobs:
         git clone https://huggingface.co/spaces/jaikushwaha7/flight-delay ../hf-space
 
         # Copy contents of GitHub repo to Hugging Face Space, excluding large files
-        rsync -av \
-          --exclude='.git' \
-          --exclude='data/raw/flights_sample_100k.csv' \
-          --exclude='data/raw/flight-delay-and-cancellation-data-2019-2023-v2.zip' \
-          --exclude='output_report.html' \
-          --exclude='reports/flight_data_profile_report.html' \ 
-          --exclude='reports/flight_data_profile_report_pre_processing.html' \
-          --exclude='wandb/' \
-          --exclude='data/raw/flight-delay-and-cancellation-data-2019-2023-v2.zip' \
-          ./ ../hf-space/
+        # rsync -av \
+        #   --exclude='.git' \
+        #   --exclude='data/raw/flights_sample_100k.csv' \
+        #   --exclude='data/raw/flight-delay-and-cancellation-data-2019-2023-v2.zip' \
+        #   --exclude='output_report.html' \
+        #   --exclude='reports/flight_data_profile_report.html' \ 
+        #   --exclude='reports/flight_data_profile_report_pre_processing.html' \
+        #   --exclude='wandb/' \
+        #   --exclude='data/raw/flight-delay-and-cancellation-data-2019-2023-v2.zip' \
+        #   ./ ../hf-space/
 
+        rsync -av \
+            --exclude='.git' \
+            --exclude='data/raw/flights_sample_100k.csv' \
+            --exclude='data/raw/flight-delay-and-cancellation-data-2019-2023-v2.zip' \
+            --exclude='data/reports/' \
+            --exclude='output_report.html' \
+            --exclude='wandb/' \
+            ./ ../hf-space/
+
+
+        
         cd ../hf-space
         git add .
         git commit -m "🚀 Auto-sync from GitHub" || echo "No changes to commit"

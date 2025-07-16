@@ -1,0 +1,27 @@
+name: Deploy to Hugging Face Space
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v3
+
+    - name: Push to Hugging Face Space
+      env:
+        HF_TOKEN: ${{ secrets.HF_TOKEN }}
+      run: |
+        git config --global user.email "you@example.com"
+        git config --global user.name "Your Name"
+        
+        git clone https://huggingface.co/spaces/jaikushwaha7/flight-delay hf-space
+        cp -r . hf-space/
+        cd hf-space
+        git add .
+        git commit -m "Sync from GitHub" || echo "No changes to commit"
+        git push https://huggingface:${HF_TOKEN}@huggingface.co/spaces/jaikushwaha7/flight-delay main

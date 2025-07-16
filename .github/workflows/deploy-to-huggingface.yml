@@ -16,8 +16,8 @@ jobs:
       env:
         HF_TOKEN: ${{ secrets.HF_TOKEN }}
       run: |
-        git config --global user.email "you@example.com"
-        git config --global user.name "Your Name"
+        git config --global user.email "jaikushwaha7@gmail.com"
+        git config --global user.name "jaikushwaha7"
         
         git clone https://huggingface.co/spaces/jaikushwaha7/flight-delay hf-space
         cp -r . hf-space/

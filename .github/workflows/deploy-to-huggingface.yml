@@ -19,14 +19,13 @@ jobs:
         git config --global user.email "jaikushwaha7@gmail.com"
         git config --global user.name "jaikushwaha7"
 
-        mkdir tmp && cp -r . tmp/
-        cd tmp
+        # Clone Hugging Face Space outside current dir
+        git clone https://huggingface.co/spaces/jaikushwaha7/flight-delay ../hf-space
 
-        git clone https://huggingface.co/spaces/jaikushwaha7/flight-delay hf-space
-        rm -rf hf-space/* hf-space/.* 2>/dev/null || true  # remove all existing files (including hidden)
+        # Copy contents of GitHub repo (current directory) into the cloned HF repo
+        rsync -av --exclude='.git' ./ ../hf-space/
 
-        cp -r . hf-space/
-        cd hf-space
+        cd ../hf-space
         git add .
-        git commit -m "🚀 Full sync from GitHub (overwrite)" || echo "No changes to commit"
+        git commit -m "🚀 Auto-sync from GitHub" || echo "No changes to commit"
         git push https://huggingface:${HF_TOKEN}@huggingface.co/spaces/jaikushwaha7/flight-delay main

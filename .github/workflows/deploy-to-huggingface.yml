@@ -24,6 +24,8 @@ jobs:
 
         # Copy contents of GitHub repo (current directory) into the cloned HF repo
         rsync -av --exclude='.git' ./ ../hf-space/
+        rsync -av --exclude='.git' --exclude='data/raw/flights_sample_100k.csv' --exclude='reports/' --exclude='output_report.html' --exclude='data/raw/flight-delay-and-cancellation-data-2019-2023-v2.zip' ./ ../hf-space/
+
 
         cd ../hf-space
         git add .

@@ -23,16 +23,18 @@ jobs:
         git clone https://huggingface.co/spaces/jaikushwaha7/flight-delay ../hf-space
 
         # Copy contents of GitHub repo (current directory) into the cloned HF repo
-        rsync -av --exclude='.git' ./ ../hf-space/data
-        rsync -av --exclude='.git' --exclude='data/raw/flights_sample_100k.csv' --exclude='reports/' \
+        rsync -av --exclude='.git' ./ 
+                  --exclude='.git' --exclude='data/raw/flights_sample_100k.csv' --exclude='reports/' \
                   --exclude='output_report.html' \
                   --exclude='data/raw/flight-delay-and-cancellation-data-2019-2023-v2.zip' \
                   --exclude='wandb/' ./ ../hf-space/
                   -exclude='.git' \
                   --exclude='data/raw/flights_sample_100k.csv' \
                   --exclude='data/reports/' \
-                  --exclude='data/output_report.html' \
-
+                  --exclude='data/output_report.html' \ 
+                  -exclude='.git' \ 
+                  ./ ../hf-space/
+          
         cd ../hf-space
         git add .
         git commit -m "🚀 Auto-sync from GitHub" || echo "No changes to commit"
